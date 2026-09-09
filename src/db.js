@@ -15,7 +15,7 @@ function load(file) {
 
 const state = {
   users: load("users.json"),
-  listings: load("properties.json"),
+  listings: load("listings.json"),
   leads: load("leads.json"),
   reviews: load("reviews.json"),
   tasks: {}, // populated at runtime by long-running mock actions
