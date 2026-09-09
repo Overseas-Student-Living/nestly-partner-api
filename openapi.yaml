@@ -1,0 +1,292 @@
+openapi: 3.0.3
+info:
+  title: Nestly Competition Sandbox API
+  version: 0.2.0
+  description: >
+    A self-hosted mock API for the Nestly Landlord App competition, run by
+    Student.com. This is a restructured reimplementation loosely inspired
+    by patterns in a real production system — not a renamed clone. See
+    docs/SECURITY_NOTE.md for what was changed and why, and
+    docs/OWNERSHIP.md for competition terms. All data is fictional.
+    Endpoints are tagged `x-provenance: based-on` (loosely inspired by a
+    real endpoint, reshaped) or `x-provenance: added` (didn't exist in the
+    source system). See CONTRIBUTING.md before adding your own.
+servers:
+  - url: http://localhost:4000
+    description: Local sandbox only — never point a real deployment of this spec at a production host.
+security:
+  - bearerAuth: []
+paths:
+  /status:
+    get:
+      tags: [system]
+      summary: Service status
+      security: []
+      responses:
+        "200": { description: OK }
+  /status/health:
+    get:
+      tags: [system]
+      summary: Dependency health check
+      security: []
+      responses:
+        "200": { description: OK }
+  /tasks/{task_id}:
+    get:
+      tags: [system]
+      summary: Poll a background task (placeholder — nothing enqueues tasks in this mock yet)
+      parameters:
+        - $ref: "#/components/parameters/TaskId"
+      responses:
+        "200": { description: OK }
+        "404": { description: Not found }
+  /accounts/signup:
+    post:
+      tags: [accounts]
+      x-provenance: based-on
+      summary: Create a landlord account
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/SignupRequest" }
+      responses:
+        "201": { description: Created }
+        "422": { description: Validation error }
+  /accounts/session:
+    post:
+      tags: [accounts]
+      x-provenance: added
+      summary: Exchange a sandbox account email for a bearer token
+      description: >
+        Added purely to make this mock runnable end-to-end — the source
+        system issues tokens via a third-party identity provider before a
+        request ever reaches its API. Not a real auth flow.
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email]
+              properties:
+                email: { type: string }
+      responses:
+        "200": { description: OK }
+        "401": { description: Unknown email }
+  /accounts/me:
+    get:
+      tags: [accounts]
+      x-provenance: based-on
+      summary: Get the authenticated landlord's profile
+      responses:
+        "200": { description: OK }
+        "401": { description: Unauthorized }
+  /listings/mine:
+    get:
+      tags: [listings]
+      x-provenance: added
+      summary: List listings owned by the authenticated landlord
+      responses:
+        "200": { description: OK }
+  /listings:
+    post:
+      tags: [listings]
+      x-provenance: added
+      summary: Create a new listing (starts as draft)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/CreateListingRequest" }
+      responses:
+        "201": { description: Created }
+        "422": { description: Validation error }
+  /listings/{listing_id}:
+    get:
+      tags: [listings]
+      x-provenance: added
+      summary: Get a single listing owned by the caller
+      parameters: [ { $ref: "#/components/parameters/ListingId" } ]
+      responses:
+        "200": { description: OK }
+        "403": { description: Not the owner }
+        "404": { description: Not found }
+    patch:
+      tags: [listings]
+      x-provenance: based-on
+      summary: Update a listing (fields, status, contact visibility)
+      description: >
+        Merges the source system's separate update / publish / unpublish /
+        hide-contact-details / unhide-contact-details endpoints into one
+        PATCH. Send only the fields you're changing.
+      parameters: [ { $ref: "#/components/parameters/ListingId" } ]
+      requestBody:
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/UpdateListingRequest" }
+      responses:
+        "200": { description: OK }
+        "422": { description: Validation error }
+  /listings/{listing_id}/amenities:
+    put:
+      tags: [listings]
+      x-provenance: based-on
+      summary: Replace a listing's amenities
+      parameters: [ { $ref: "#/components/parameters/ListingId" } ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [amenities]
+              properties:
+                amenities:
+                  type: array
+                  items: { $ref: "#/components/schemas/Amenity" }
+      responses: { "200": { description: OK } }
+  /listings/{listing_id}/media/upload-url:
+    post:
+      tags: [listings]
+      x-provenance: based-on
+      summary: Get a (fake) upload URL for a media item
+      parameters: [ { $ref: "#/components/parameters/ListingId" } ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [filename, content_type]
+              properties:
+                filename: { type: string }
+                content_type: { type: string }
+      responses: { "200": { description: OK } }
+  /listings/{listing_id}/media:
+    post:
+      tags: [listings]
+      x-provenance: based-on
+      summary: Register an uploaded media item against a listing
+      parameters: [ { $ref: "#/components/parameters/ListingId" } ]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url: { type: string }
+                media_type: { type: string }
+                caption: { type: string }
+      responses: { "201": { description: Created } }
+  /listings/{listing_id}/media/{media_id}:
+    delete:
+      tags: [listings]
+      x-provenance: based-on
+      summary: Delete a media item from a listing
+      parameters:
+        - $ref: "#/components/parameters/ListingId"
+        - name: media_id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "204": { description: Deleted }
+        "404": { description: Not found }
+  /listings/{listing_id}/reviews:
+    get:
+      tags: [listings]
+      x-provenance: based-on
+      summary: List reviews for a listing
+      parameters: [ { $ref: "#/components/parameters/ListingId" } ]
+      responses: { "200": { description: OK } }
+  /listings/{listing_id}/insights:
+    get:
+      tags: [listings]
+      x-provenance: based-on
+      summary: Performance summary for a single listing
+      description: >
+        A simplified, single-listing version of the source system's
+        portfolio-wide admin analytics/stats endpoints.
+      parameters: [ { $ref: "#/components/parameters/ListingId" } ]
+      responses: { "200": { description: OK } }
+  /leads:
+    get:
+      tags: [leads]
+      x-provenance: based-on
+      summary: List leads, optionally filtered to one listing
+      description: >
+        Replaces the source system's two separate path-scoped endpoints
+        (one property, one caller) with a single endpoint and an optional
+        `listing_id` query filter.
+      parameters:
+        - name: listing_id
+          in: query
+          required: false
+          schema: { type: string }
+      responses: { "200": { description: OK } }
+  /overview:
+    get:
+      tags: [overview]
+      x-provenance: based-on
+      summary: Landlord home-screen summary (portfolio, recent leads, action items)
+      responses: { "200": { description: OK } }
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: "Sandbox-only token from POST /accounts/session, shape `sandbox-session.<user_id>`. Unique to this mock."
+  parameters:
+    ListingId:
+      name: listing_id
+      in: path
+      required: true
+      schema: { type: string }
+    TaskId:
+      name: task_id
+      in: path
+      required: true
+      schema: { type: string }
+  schemas:
+    SignupRequest:
+      type: object
+      required: [email, first_name]
+      properties:
+        email: { type: string }
+        first_name: { type: string }
+        last_name: { type: string }
+        phone: { type: string }
+        company_name: { type: string }
+    CreateListingRequest:
+      type: object
+      required: [name, address]
+      properties:
+        name: { type: string }
+        address: { type: string }
+        city: { type: string }
+        state: { type: string }
+        country: { type: string }
+        postal_code: { type: string }
+        latitude: { type: number }
+        longitude: { type: number }
+        property_type: { type: string }
+        price_from: { type: number }
+        price_to: { type: number }
+        currency: { type: string }
+        billing_period: { type: string }
+        description: { type: string }
+    UpdateListingRequest:
+      type: object
+      description: "Any subset of CreateListingRequest's fields, plus optional status and contact_hidden."
+      properties:
+        status: { type: string, enum: [draft, published, unpublished] }
+        contact_hidden: { type: boolean }
+    Amenity:
+      type: object
+      required: [name]
+      properties:
+        name: { type: string }
+        status: { type: string }

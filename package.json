@@ -1,0 +1,21 @@
+{
+  "name": "nestly-partner-api",
+  "version": "0.1.0",
+  "description": "Anonymized, stubbed mock of the Nestly Partner API for the Nestly Landlord App competition.",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "uuid": "^9.0.1"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

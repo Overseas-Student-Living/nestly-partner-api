@@ -1,0 +1,29 @@
+[
+  {
+    "listing_id": "prop_a1b2c3",
+    "rating": 5,
+    "review_content": "Great location, super close to campus and the gym is a nice touch.",
+    "author_name": "L. Osei",
+    "review_date": "2026-05-12",
+    "owner_answer": "Thanks so much for the kind words!",
+    "owner_timestamp": "2026-05-13"
+  },
+  {
+    "listing_id": "prop_a1b2c3",
+    "rating": 4,
+    "review_content": "Good value studio, wifi could be a bit faster during peak hours.",
+    "author_name": "R. Patel",
+    "review_date": "2026-03-02",
+    "owner_answer": null,
+    "owner_timestamp": null
+  },
+  {
+    "listing_id": "prop_j1k2l3",
+    "rating": 5,
+    "review_content": "Loved the character of the building, roof terrace is amazing in summer.",
+    "author_name": "H. Kowalski",
+    "review_date": "2026-06-20",
+    "owner_answer": "So glad you enjoyed the terrace, see you again next term!",
+    "owner_timestamp": "2026-06-21"
+  }
+]

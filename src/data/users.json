@@ -1,0 +1,32 @@
+[
+  {
+    "id": "usr_8f3a1c2d",
+    "email": "priya.landlord@example.com",
+    "first_name": "Priya",
+    "last_name": "Nandakumar",
+    "company_name": "Nandakumar Lettings Ltd",
+    "marketing_consent": true,
+    "created_at": "2025-11-02T09:14:00Z",
+    "phone": "+44 7700 900123"
+  },
+  {
+    "id": "usr_2b7e9f10",
+    "email": "carlos.rents@example.com",
+    "first_name": "Carlos",
+    "last_name": "Mendoza",
+    "company_name": "Mendoza Student Homes",
+    "marketing_consent": false,
+    "created_at": "2025-12-18T14:02:00Z",
+    "phone": "+1 415 555 0114"
+  },
+  {
+    "id": "usr_5d4c6a91",
+    "email": "amelia.props@example.com",
+    "first_name": "Amelia",
+    "last_name": "Fairweather",
+    "company_name": null,
+    "marketing_consent": true,
+    "created_at": "2026-01-09T11:47:00Z",
+    "phone": "+44 7700 900456"
+  }
+]
