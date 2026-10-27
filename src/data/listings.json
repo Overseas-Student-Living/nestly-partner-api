@@ -1,0 +1,304 @@
+[
+  {
+    "id": "prop_a1b2c3",
+    "owner_id": "usr_8f3a1c2d",
+    "name": "Maple Court Residences",
+    "slug": "maple-court-residences",
+    "status": "published",
+    "address": "14 Maple Court",
+    "city": "Manchester",
+    "state": null,
+    "country": "United Kingdom",
+    "postal_code": "M14 6AB",
+    "latitude": 53.4622,
+    "longitude": -2.2287,
+    "nearest_university": "Riverstone University",
+    "distance_to_university_km": 0.6,
+    "property_type": "purpose_built_studio",
+    "price_from": 195,
+    "price_to": 265,
+    "currency": "GBP",
+    "billing_period": "week",
+    "contact_phone": "+44 161 496 0110",
+    "contact_email": "lettings@maplecourt-example.com",
+    "website": "https://maplecourt-example.com",
+    "contact_hidden": false,
+    "description": "Modern purpose-built studios five minutes' walk from Riverstone University, with on-site gym and study lounge.",
+    "amenities": [
+      {
+        "name": "wifi",
+        "status": "included"
+      },
+      {
+        "name": "gym",
+        "status": "on_site"
+      },
+      {
+        "name": "laundry",
+        "status": "on_site"
+      },
+      {
+        "name": "bike_storage",
+        "status": "available"
+      },
+      {
+        "name": "cctv",
+        "status": "available"
+      }
+    ],
+    "floorplans": [
+      {
+        "name": "Classic Studio",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "price_min": 195,
+        "price_max": 210,
+        "sqft_min": 180,
+        "sqft_max": 195
+      },
+      {
+        "name": "Premium Studio",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "price_min": 235,
+        "price_max": 265,
+        "sqft_min": 210,
+        "sqft_max": 230
+      }
+    ],
+    "images": [
+      {
+        "id": "img_001",
+        "url": "https://picsum.photos/seed/maple-court-1/1200/800",
+        "image_type": "exterior",
+        "caption": "Front entrance"
+      },
+      {
+        "id": "img_002",
+        "url": "https://picsum.photos/seed/maple-court-2/1200/800",
+        "image_type": "interior",
+        "caption": "Classic Studio"
+      }
+    ],
+    "avg_rating": 4.4,
+    "review_count": 87,
+    "created_at": "2025-09-01T10:00:00Z",
+    "updated_at": "2026-08-20T08:30:00Z"
+  },
+  {
+    "id": "prop_d4e5f6",
+    "owner_id": "usr_8f3a1c2d",
+    "name": "Birchwood Gardens",
+    "slug": "birchwood-gardens",
+    "status": "published",
+    "address": "22 Birchwood Lane",
+    "city": "Manchester",
+    "state": null,
+    "country": "United Kingdom",
+    "postal_code": "M14 7CD",
+    "latitude": 53.4589,
+    "longitude": -2.2311,
+    "nearest_university": "Riverstone University",
+    "distance_to_university_km": 1.4,
+    "property_type": "shared_house",
+    "price_from": 150,
+    "price_to": 175,
+    "currency": "GBP",
+    "billing_period": "week",
+    "contact_phone": "+44 161 496 0220",
+    "contact_email": "hello@birchwoodgardens-example.com",
+    "website": null,
+    "contact_hidden": false,
+    "description": "Refurbished five-bedroom shared house with private garden, close to campus shuttle stop.",
+    "amenities": [
+      {
+        "name": "wifi",
+        "status": "included"
+      },
+      {
+        "name": "garden",
+        "status": "available"
+      },
+      {
+        "name": "dishwasher",
+        "status": "available"
+      }
+    ],
+    "floorplans": [
+      {
+        "name": "Standard Double",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "price_min": 150,
+        "price_max": 175,
+        "sqft_min": 110,
+        "sqft_max": 130
+      }
+    ],
+    "images": [
+      {
+        "id": "img_003",
+        "url": "https://picsum.photos/seed/birchwood-1/1200/800",
+        "image_type": "exterior",
+        "caption": "Garden view"
+      }
+    ],
+    "avg_rating": 4.1,
+    "review_count": 34,
+    "created_at": "2025-10-14T09:20:00Z",
+    "updated_at": "2026-07-02T16:10:00Z"
+  },
+  {
+    "id": "prop_g7h8i9",
+    "owner_id": "usr_2b7e9f10",
+    "name": "Sunset Loop Apartments",
+    "slug": "sunset-loop-apartments",
+    "status": "draft",
+    "address": "500 Sunset Loop",
+    "city": "Austin",
+    "state": "TX",
+    "country": "United States",
+    "postal_code": "78705",
+    "latitude": 30.2911,
+    "longitude": -97.7405,
+    "nearest_university": "Colby State University",
+    "distance_to_university_km": 0.9,
+    "property_type": "purpose_built_apartment",
+    "price_from": 780,
+    "price_to": 1150,
+    "currency": "USD",
+    "billing_period": "month",
+    "contact_phone": "+1 512 555 0199",
+    "contact_email": "leasing@sunsetloop-example.com",
+    "website": "https://sunsetloop-example.com",
+    "contact_hidden": true,
+    "description": "New-build 1 & 2 bed apartments a short walk from Colby State's main campus. Listing not yet published \u2014 pending final photos.",
+    "amenities": [
+      {
+        "name": "pool",
+        "status": "on_site"
+      },
+      {
+        "name": "parking",
+        "status": "available"
+      },
+      {
+        "name": "air_conditioning",
+        "status": "included"
+      }
+    ],
+    "floorplans": [
+      {
+        "name": "1 Bed / 1 Bath",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "price_min": 780,
+        "price_max": 900,
+        "sqft_min": 520,
+        "sqft_max": 560
+      },
+      {
+        "name": "2 Bed / 2 Bath",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "price_min": 980,
+        "price_max": 1150,
+        "sqft_min": 780,
+        "sqft_max": 820
+      }
+    ],
+    "images": [],
+    "avg_rating": null,
+    "review_count": 0,
+    "created_at": "2026-06-30T13:45:00Z",
+    "updated_at": "2026-08-25T09:00:00Z"
+  },
+  {
+    "id": "prop_j1k2l3",
+    "owner_id": "usr_5d4c6a91",
+    "name": "The Old Bindery",
+    "slug": "the-old-bindery",
+    "status": "published",
+    "address": "9 Press Yard",
+    "city": "Leeds",
+    "state": null,
+    "country": "United Kingdom",
+    "postal_code": "LS2 3PY",
+    "latitude": 53.7997,
+    "longitude": -1.5492,
+    "nearest_university": "Northgate University",
+    "distance_to_university_km": 0.3,
+    "property_type": "converted_building",
+    "price_from": 210,
+    "price_to": 320,
+    "currency": "GBP",
+    "billing_period": "week",
+    "contact_phone": "+44 113 496 0330",
+    "contact_email": "stay@oldbindery-example.com",
+    "website": "https://oldbindery-example.com",
+    "contact_hidden": false,
+    "description": "A converted Victorian bindery with exposed brick studios, right in the city centre next to Northgate University.",
+    "amenities": [
+      {
+        "name": "wifi",
+        "status": "included"
+      },
+      {
+        "name": "study_room",
+        "status": "on_site"
+      },
+      {
+        "name": "cinema_room",
+        "status": "on_site"
+      },
+      {
+        "name": "roof_terrace",
+        "status": "available"
+      }
+    ],
+    "floorplans": [
+      {
+        "name": "Bindery Studio",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "price_min": 210,
+        "price_max": 250,
+        "sqft_min": 190,
+        "sqft_max": 205
+      },
+      {
+        "name": "Bindery Deluxe",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "price_min": 280,
+        "price_max": 320,
+        "sqft_min": 230,
+        "sqft_max": 250
+      }
+    ],
+    "images": [
+      {
+        "id": "img_004",
+        "url": "https://picsum.photos/seed/bindery-1/1200/800",
+        "image_type": "exterior",
+        "caption": "Press Yard entrance"
+      },
+      {
+        "id": "img_005",
+        "url": "https://picsum.photos/seed/bindery-2/1200/800",
+        "image_type": "interior",
+        "caption": "Bindery Deluxe studio"
+      },
+      {
+        "id": "img_006",
+        "url": "https://picsum.photos/seed/bindery-3/1200/800",
+        "image_type": "amenity",
+        "caption": "Roof terrace"
+      }
+    ],
+    "avg_rating": 4.7,
+    "review_count": 152,
+    "created_at": "2025-08-11T08:00:00Z",
+    "updated_at": "2026-09-01T12:15:00Z"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "lead_0001",
+    "listing_id": "prop_a1b2c3",
+    "status": "new",
+    "name": "Jordan Ahmed",
+    "email": "jordan.ahmed@example.com",
+    "phone": "+44 7700 900789",
+    "message": "Hi, is the Premium Studio available for the January start date? Would love a viewing.",
+    "marketing_consent": true,
+    "created_at": "2026-08-28T10:12:00Z"
+  },
+  {
+    "id": "lead_0002",
+    "listing_id": "prop_a1b2c3",
+    "status": "responded",
+    "name": "Wei Zhang",
+    "email": "wei.zhang@example.com",
+    "phone": null,
+    "message": "Does the studio price include bills?",
+    "marketing_consent": false,
+    "created_at": "2026-08-20T15:47:00Z"
+  },
+  {
+    "id": "lead_0003",
+    "listing_id": "prop_d4e5f6",
+    "status": "new",
+    "name": "Sofia Marin",
+    "email": "sofia.marin@example.com",
+    "phone": "+44 7700 900321",
+    "message": "Is there a double room free from September? I'd be sharing with a friend, is there a two-room deal?",
+    "marketing_consent": true,
+    "created_at": "2026-09-01T08:03:00Z"
+  },
+  {
+    "id": "lead_0004",
+    "listing_id": "prop_j1k2l3",
+    "status": "closed",
+    "name": "Tom Blake",
+    "email": "tom.blake@example.com",
+    "phone": "+44 7700 900654",
+    "message": "Booked a viewing last week, just confirming my move-in date is still the 14th.",
+    "marketing_consent": false,
+    "created_at": "2026-07-30T09:22:00Z"
+  }
+]
