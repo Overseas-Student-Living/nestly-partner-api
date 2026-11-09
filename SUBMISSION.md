@@ -45,7 +45,15 @@ Your submission is a repository (your own or a fork of this one) that contains:
 
 ## 4. Send it in
 
-- **Where and how to send it:** _to be confirmed by the organizers._
+1. **Fork this repository** on GitHub into your own account.
+2. **Build your entry in your fork** and push it there, with your submission
+   notes and setup instructions.
+3. **Give the organizers access to review it.** Either:
+   - make your fork public, or
+   - add the organizer's GitHub account, `[reviewer GitHub username]`, as a
+     collaborator with read access (repository **Settings → Collaborators**).
+4. **Send the link to your fork** to the organizers by the deadline.
+
 - **Deadline:** _to be confirmed by the organizers._
 
 Competition logistics such as deadlines, the judging panel, and prizes are not
