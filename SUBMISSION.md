@@ -58,7 +58,15 @@ Your submission is a repository (your own or a fork of this one) that contains:
    **`jacksonPJ95` must always be added**, and a submission without it can't
    be reviewed:
    - `jacksonPJ95` (mandatory)
-5. **Send the link to your fork** to the organizers by the deadline.
+5. **Submit your fork by opening an issue** on this repository by the deadline:
+   1. Go to <https://github.com/Overseas-Student-Living/nestly-partner-api/issues/new>.
+   2. Title: `Submission: <your name or team name>`.
+   3. In the body, paste the link to your fork, plus your name or team name
+      and a contact email.
+   4. Click **Submit new issue**.
+
+   Anyone can see this issue, so don't put private details in it. Your fork
+   stays private, so the link only works for the people you've given access to.
 
 - **Deadline:** _to be confirmed by the organizers._
 
