@@ -58,9 +58,6 @@ Your submission is a repository (your own or a fork of this one) that contains:
    **`jacksonPJ95` must always be added**, and a submission without it can't
    be reviewed:
    - `jacksonPJ95` (mandatory)
-   - `genepeng`
-   - `kylem123`
-   - `ravi-nar`
 5. **Send the link to your fork** to the organizers by the deadline.
 
 - **Deadline:** _to be confirmed by the organizers._
