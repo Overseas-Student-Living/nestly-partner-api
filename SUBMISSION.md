@@ -48,14 +48,18 @@ Your submission is a repository (your own or a fork of this one) that contains:
 1. **Fork this repository** on GitHub into your own account.
 2. **Build your entry in your fork** and push it there, with your submission
    notes and setup instructions.
-3. **Add the organizers as collaborators on your fork, with read access.**
-   This is required. In your fork, go to **Settings → Collaborators** and
-   add each of these GitHub accounts:
+3. **Make your fork private.** This is required. In your fork, go to
+   **Settings → General → Danger Zone → Change visibility** and set it to
+   **Private**. Keep it private until the competition closes, so other
+   entrants can't see or copy your work.
+4. **Add the organizers as read-only collaborators.** This is required. In
+   your fork, go to **Settings → Collaborators**, and add each of these
+   GitHub accounts with **Read** access. Don't give them write or admin access:
    - `genepeng`
    - `jacksonPJ95`
    - `kylem123`
    - `ravi-nar`
-4. **Send the link to your fork** to the organizers by the deadline.
+5. **Send the link to your fork** to the organizers by the deadline.
 
 - **Deadline:** _to be confirmed by the organizers._
 
