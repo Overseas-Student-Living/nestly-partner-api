@@ -54,9 +54,11 @@ Your submission is a repository (your own or a fork of this one) that contains:
    entrants can't see or copy your work.
 4. **Add the organizers as read-only collaborators.** This is required. In
    your fork, go to **Settings → Collaborators**, and add each of these
-   GitHub accounts with **Read** access. Don't give them write or admin access:
+   GitHub accounts with **Read** access. Don't give them write or admin access.
+   **`jacksonPJ95` must always be added**, and a submission without it can't
+   be reviewed:
+   - `jacksonPJ95` (mandatory)
    - `genepeng`
-   - `jacksonPJ95`
    - `kylem123`
    - `ravi-nar`
 5. **Send the link to your fork** to the organizers by the deadline.
