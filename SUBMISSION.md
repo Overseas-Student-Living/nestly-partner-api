@@ -48,10 +48,13 @@ Your submission is a repository (your own or a fork of this one) that contains:
 1. **Fork this repository** on GitHub into your own account.
 2. **Build your entry in your fork** and push it there, with your submission
    notes and setup instructions.
-3. **Give the organizers access to review it.** Either:
-   - make your fork public, or
-   - add the organizer's GitHub account, `[reviewer GitHub username]`, as a
-     collaborator with read access (repository **Settings → Collaborators**).
+3. **Add the organizers as collaborators on your fork, with read access.**
+   This is required. In your fork, go to **Settings → Collaborators** and
+   add each of these GitHub accounts:
+   - `genepeng`
+   - `jacksonPJ95`
+   - `kylem123`
+   - `ravi-nar`
 4. **Send the link to your fork** to the organizers by the deadline.
 
 - **Deadline:** _to be confirmed by the organizers._
