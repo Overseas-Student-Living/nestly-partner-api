@@ -68,7 +68,7 @@ Your submission is a repository (your own or a fork of this one) that contains:
    Anyone can see this issue, so don't put private details in it. Your fork
    stays private, so the link only works for the people you've given access to.
 
-- **Deadline:** _to be confirmed by the organizers._
+- **Deadline:** 10 December 2026 (final submission deadline).
 
 Competition logistics such as deadlines, the judging panel, and prizes are not
 covered in this repository. Ask the organizers if anything here is unclear
